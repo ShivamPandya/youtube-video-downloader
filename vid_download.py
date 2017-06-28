@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 links = []
 song_raw = input("Enter song name with singer (Ex: hello by adele): ")
-song = song_raw.replace(" ", "+")
+song = song_raw.replace(" ", "")
 
 search = "https://www.youtube.com/results?search_query=" + song
 urlparse(search)
