@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup as bs
 from urllib.parse import urlparse
 
 links = []
-song1 = input("Enter song name with singer (Ex: hello by adele): ")
-song = song1.replace(" ", "+")
+song_raw = input("Enter song name with singer (Ex: hello by adele): ")
+song = song_raw.replace(" ", "+")
 
 search = "https://www.youtube.com/results?search_query=" + song
 urlparse(search)
