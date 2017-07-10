@@ -1,15 +1,10 @@
-
-# coding: utf-8
-
-# In[43]:
-
-
 import urllib.request as urlreq
 import youtube_dl as ydl
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urlparse
 
 links = []
+
 song_raw = input("Enter song name with singer (Ex: hello by adele): ")
 song = song_raw.replace(" ", "")
 
