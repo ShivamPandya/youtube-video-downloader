@@ -5,6 +5,7 @@ from urllib.parse import urlparse
 
 links = []
 
+
 song_raw = input("Enter song name with singer (Ex: hello by adele): ")
 song = song_raw.replace(" ", "")
 
@@ -17,5 +18,9 @@ x = urlreq.urlopen(search)
 soup= bs(x.read(),"html5lib")
 for vid in soup.findAll(attrs={'class':'yt-uix-tile-link'}):
     links.append('https://www.youtube.com' + vid['href'])
-ydl.YoutubeDL().download([links[0]])
+
+if links:
+	ydl.YoutubeDL().download([links[0]])
+else:
+	print("N/A")
 
